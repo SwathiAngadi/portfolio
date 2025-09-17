@@ -37,6 +37,8 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 offset={-50} 
+                spy={true} 
+                activeClass="text-yellow-400 font-semibold"
                 className="cursor-pointer hover:text-gray-300 text-sm ml-5"
               >
                 {section.toUpperCase()}
