@@ -3,7 +3,7 @@
 /* Global defaults using CSS variables */
 :root {
   --color-text: #d5d8de;       /* general text color */
-  --color-text-light: #798596; /* lighter variant */
+  
 }
 
 /* Apply default color globally */
@@ -12,3 +12,5 @@
     color: var(--color-text);    
   }
 }
+
+

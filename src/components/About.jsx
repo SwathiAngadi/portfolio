@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import profileImage from "../assets/profile.jpg";
 const About = () => {
   return (
-    <section id="about" className="p-10 bg-gray-100">
+    <section id="about" className="p-10 ">
+     
       <motion.h2
         className="text-3xl mb-6 text-center uppercase text-black"
         initial={{ opacity: 0, y: -20 }}
