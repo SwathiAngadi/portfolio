@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-scroll"
 
-const Navbar = () => {
+export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -76,4 +76,3 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;

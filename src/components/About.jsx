@@ -1,10 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 import profileImage from "../assets/profile.jpg";
-const About = () => {
+export default function About() {
   return (
-    <section id="about" className="p-10 ">
-     
+    <section id="about" className="p-10 relative ">
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <motion.div
+          className="absolute w-[150%] h-[150%] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 blur-3xl opacity-30"
+          animate={{
+            x: ["0%", "50%", "0%"],
+            y: ["0%", "50%", "0%"],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </div>
       <motion.h2
         className="text-3xl mb-6 text-center uppercase text-black"
         initial={{ opacity: 0, y: -20 }}
@@ -30,7 +43,7 @@ const About = () => {
         viewport={{ once: true }}
       >
         I am a developer with 5+ years of experience creating scalable and user-friendly applications using React, Redux, and modern JavaScript frameworks. I’ve worked with companies like JP Morgan Chase, Sony, and Torry Harris, where I built reusable UI components, optimized performance, and delivered high-quality features that improved user experience.
-        In 2022, I took a career break to focus on personal growth and relocation. During this time, I stayed connected with the tech world by building side projects (like an AI-powered recipe app and a puzzle game), exploring new tools like Vite and Framer Motion, and sharpening my design skills with Figma.
+        In 2022, I took a career break due to relocation. During this time, I stayed connected with the tech world by building side projects (like an AI-powered recipe app and a puzzle game), exploring new tools like Tailwind CSS and Framer Motion, and sharpening my design skills with Figma.
         Now, I’m excited to bring my refreshed perspective, problem-solving mindset, and technical expertise back into a collaborative team where I can contribute to building impactful digital products.
 
       </motion.p>
@@ -41,4 +54,4 @@ const About = () => {
   );
 };
 
-export default About;
+

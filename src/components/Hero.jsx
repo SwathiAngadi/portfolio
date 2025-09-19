@@ -4,7 +4,7 @@ import { Link } from "react-scroll"
 import bgImage from '../assets/bg2.jpg';
 import { ChevronDown } from 'lucide-react';
 
-const Hero = () => {
+export default function Hero() {
   return (
     <section id="hero" style={{ backgroundImage: `url(${bgImage})` }} className="h-screen bg-cover bg-center flex flex-col-2 justify-center items-center">
       <div className="absolute inset-0 bg-black/50 z-0"></div>       
@@ -52,4 +52,3 @@ After a career break, I’ve returned with expertise in React, JavaScript, Tailw
   );
 };
 
-export default Hero;

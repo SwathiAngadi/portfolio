@@ -5,6 +5,9 @@ import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Footer from "./components/Footer.jsx";
 import Experience from "./components/Experience.jsx";
+import Reordering from "./components/Reordering.tsx";
+import CardGrid from "./components/CardGrid.jsx";
+import Contact from "./components/Contacts.jsx";
 
 function App() {
   return (
@@ -14,7 +17,7 @@ function App() {
       <About />
       <Experience/>
       <Projects />
-      <Footer />
+      <Contact/>
     </div>
   );
 }
