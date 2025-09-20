@@ -26,7 +26,7 @@ export default function About() {
       >
        A little bit about me
       </motion.h2>
-      <div className="flex flex-col-2 max-w-6xl">
+      <div className="flex flex-col lg:flex-row max-w-6xl">
       <motion.div
         className="flex-1 mt-10 md:mt-0 flex justify-center"
         initial={{ scale: 0.8, opacity: 0 }}

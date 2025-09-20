@@ -69,7 +69,8 @@ export default function Projects() {
               <img  src= {selectedProject.img} className=" img-responsive img-centered"/>  
               <p className="text-gray-600 text-center pt-4 text-justify">{selectedProject.description}</p>
               <div className="text-center">
-              <button className="p-2 border text-blue-900 m-5">View Source</button> or
+              <button className="p-2 border text-blue-900 m-5">View Source</button> 
+              <span className='text-gray-600'>or</span>
               <button className="p-2 border text-blue-900  m-5" onClick={()=>gotToURL(selectedProject.link)}>Visit Site</button>
               </div>
               

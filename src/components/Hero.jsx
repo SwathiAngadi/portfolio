@@ -23,7 +23,7 @@ export default function Hero() {
        Hi, I'm Swathi Angadi
       </motion.h1>
       <motion.p
-        className="text-xl text-center text-white  items-center justify-center leading-relaxed mt-10"
+        className="text-xl text-center text-white text-center p-4 leading-relaxed mt-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}

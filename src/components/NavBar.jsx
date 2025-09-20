@@ -7,6 +7,7 @@ export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
+ 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {

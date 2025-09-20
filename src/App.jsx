@@ -8,6 +8,7 @@ import Experience from "./components/Experience.jsx";
 import Reordering from "./components/Reordering.tsx";
 import CardGrid from "./components/CardGrid.jsx";
 import Contact from "./components/Contacts.jsx";
+import Resume from "./components/Resume.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <About />
       <Experience/>
+      {/* <Resume/> */}
       <Projects />
       <Contact/>
     </div>
