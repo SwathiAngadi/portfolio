@@ -10,14 +10,14 @@ const projects = [
   { id: 1, img: portfolio, name: "Portfolio Website", 
   description: `A modern, responsive portfolio to showcase my work and skills.Built with React for modular and 
   maintainable components.Styled using Tailwind CSS for a sleek, professional look. Enhanced with Framer Motion 
-  for smooth animations.`, link: "#" },
+  for smooth animations.`, link: "#", githubLink:"https://github.com/SwathiAngadi/portfolio", technologies:['React','JavaScript', 'Tailwind', 'Motion'] },
   { id: 2, img: endgame, name: "End Game", description: `A browser-based game built with React, featuring dynamic 
   gameplay, smooth animations, and responsive design. Showcases my skills in UI design, state management, and creative 
   coding. A single-player game where you guess a word in eight tries or less, with colors indicating if letters are correct`, 
-   link: "https://swathiangadi.github.io/EndGame/" },
+   link: "https://swathiangadi.github.io/EndGame/",  githubLink: "https://github.com/SwathiAngadi/EndGame", technologies:['React','JavaScript','HTML','CSS']},
   { id: 3,img: chefclaude,  name: "Chef Claude", description:`An AI-powered web app that suggests recipes based on ingredients entered by the user. Built with React 
   and AI integration, featuring a clean interface, dynamic suggestions, and interactive user experience. Highlights my skills in frontend development,
-   API integration, and user-focused design`, link: "https://chef-claude-swathi.netlify.app/" },
+   API integration, and user-focused design`, link: "https://chef-claude-swathi.netlify.app/", githubLink:"https://github.com/SwathiAngadi/chef-claude", technologies:['React','JavScript','HuggingFace','HTML','CSS'] },
 ];
 
 export default function Projects() {
@@ -29,20 +29,24 @@ export default function Projects() {
 
   }
   return (
-    <section id="work" className="p-10 relative">
+    <section id="work" className="p-15 pb-20 relative">
       <h1 className="text-3xl mb-6 text-center text-black uppercase">What i've done</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
+        {projects.map((project) => (         
                    <motion.div
                    key={project.id}
                    layoutId={`card-${project.id}`} 
                    onClick={() => setSelectedProject(project)}
-                   className="bg-gray-100 shadow-md rounded-2xl p-6 cursor-pointer h-70 hover:shadow-xl transition "
+                   className="bg-gray-100 shadow-md rounded-2xl p-6 cursor-pointer  hover:shadow-xl transition "
                  >
                   <h3 className="text-lg font-semibold text-center pb-2 text-black">{project.name}</h3>
-                  <img  src= {project.img}/>                   
+                  <img  src= {project.img}/> 
+                  <div className="flex flex-row pt-5 gap-3 flex-wrap break-normal">
+                  {project.technologies.map((tech)=><span className="bg-gray-300 pl-2 pr-2 p-1 text-wrap border border-gray-300 rounded text-black" key={tech}>{tech}</span>)}
+                    </div>  
+                  
                   </motion.div>
-        ))}
+))}
               <AnimatePresence>
         {selectedProject && (
           <>
@@ -69,7 +73,7 @@ export default function Projects() {
               <img  src= {selectedProject.img} className=" img-responsive img-centered"/>  
               <p className="text-gray-600 text-center pt-4 text-justify">{selectedProject.description}</p>
               <div className="text-center">
-              <button className="p-2 border text-blue-900 m-5">View Source</button> 
+              <button className="p-2 border text-blue-900 m-5" onClick={()=>gotToURL(selectedProject.githubLink)}>View Source</button> 
               <span className='text-gray-600'>or</span>
               <button className="p-2 border text-blue-900  m-5" onClick={()=>gotToURL(selectedProject.link)}>Visit Site</button>
               </div>

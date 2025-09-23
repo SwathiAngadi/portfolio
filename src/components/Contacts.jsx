@@ -61,7 +61,7 @@ export default function Contacts() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 50, scale: 0.8 }}
           transition={{ duration: 0.3 }}
-          className="mt-15"
+          className="mt-10"
         >
         <ArrowBigUpDash size={30} />
         </motion.button>

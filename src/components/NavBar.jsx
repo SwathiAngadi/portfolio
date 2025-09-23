@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-scroll"
+import { Link } from "react-scroll";
+import logo from './../assets/logo.png';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,7 @@ export default function NavBar() {
  
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 80) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -26,8 +27,10 @@ export default function NavBar() {
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? " p-3 bg-black shadow-lg" : "p-6 bg-transparent"
     }`}>
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <h1 className="text-2xl uppercase">swathi angadi</h1>
+      <div className="flex flex-row justify-left align-center">
+      <img src={logo} className="h-12"/><h1 className="text-2xl uppercase"> swathi angadi</h1>
+      </div>
+       
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
@@ -37,7 +40,7 @@ export default function NavBar() {
                 to={section}
                 smooth={true}
                 duration={500}
-                offset={-50} 
+                offset={-70} 
                 spy={true} 
                 activeClass="text-yellow-400 font-semibold"
                 className="cursor-pointer hover:text-gray-300 text-sm ml-5"
