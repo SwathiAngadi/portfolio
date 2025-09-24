@@ -5,6 +5,7 @@ import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
 import Contact from "./components/Contacts.jsx";
+import ResumeSection from "./components/ResumeSection.jsx";
 
 function App() {
   return (

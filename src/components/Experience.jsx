@@ -23,6 +23,8 @@ import sony from './../assets/sony.png';
 import torryharris from './../assets/torryharris.png';
 import cnetric from './../assets/cnetric.png';
 
+import bg from './../assets/background1.jpg'
+
 export default function Experience(){    
     const transition = {
         duration: 0.8,
@@ -58,12 +60,24 @@ export default function Experience(){
        
     </div>
     </div>
-    <section id="resume" className="relative flex flex-col items-center gap-4">
-        
-     <div className="absolute inset-0 bg-black/40" />
-       <h1 className="text-3xl text-center uppercase z-10">check out my resume</h1>
-       <button className="border z-11 p-2" onClick={openResume}> Grab A Copy </button>
-     </section>   
+    <section id="resume" className="relative flex flex-col items-center justify-center gap-4 h-[300] overflow-hidden p-20">
+  {/* Background div (blur only on mobile) */}
+  <div
+    className="absolute inset-0 bg-cover bg-center z-0 md:bg-fixed md:filter-none filter blur-sm"
+    style={{ backgroundImage: `url(${bg})`, backgroundSize: 'contain' }}
+  ></div>
+
+  {/* Overlay */}
+  <div className="absolute  inset-0 bg-black/40 z-10"></div>
+
+  {/* Content */}
+  <div className="relative z-20 flex flex-col items-center justify-center h-full text-white p-6">
+    <h1 className="text-3xl uppercase">Check out my resume</h1>
+    <button className="mt-4 px-4 py-2 border rounded-md bg-white/10 hover:bg-white/20 transition">
+      Grab A Copy
+    </button>
+  </div>
+</section> 
     </section>
       
     )

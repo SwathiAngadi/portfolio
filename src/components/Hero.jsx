@@ -6,7 +6,8 @@ import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="hero" style={{ backgroundImage: `url(${bgImage})` }} className="h-screen bg-cover bg-center flex flex-col-2 justify-center items-center">
+    <section id="hero" className="h-screen bg-cover bg-center flex flex-col-2 justify-center items-center ">
+      <div className="absolute inset-0 bg-cover bg-center z-0 md:bg-fixed md:filter-none filter blur-sm" style={{ backgroundImage: `url(${bgImage})` }}></div>
       <div className="absolute inset-0 bg-black/50 z-0"></div>       
        <motion.div
         className="relative z-10 flex-1 max-w-2xl text-center mt-10 md:mt-0 justify-center"
