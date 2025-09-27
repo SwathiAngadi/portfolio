@@ -17,6 +17,10 @@ import npm from './../assets/icons/npm.png';
 import vscode from './../assets/icons/vscode.svg';
 import chart from './../assets/icons/chartjs.ico';
 import vite from './../assets/icons/vite.svg';
+import materialUi from './../assets/icons/material.svg';
+import highcharts from './../assets/icons/highcharts.png';
+import zustand from './../assets/icons/zustand.png';
+import reactQuery from './../assets/icons/query.png';
 
 import jpmc from './../assets/jpmc.png';
 import sony from './../assets/sony.png';
@@ -41,7 +45,7 @@ export default function Experience(){
         <div>
          <h1 className="text-xl text-center uppercase text-black p-4">Some technologies and tools I worked with</h1>  
          <div className="grid grid-cols-3 md:grid-cols-6 items-center">          
-            {[react,next,redux,typescript,javascript, tailwindcss,fmotion,jquery,html5,css3,sass,git,github,npm,vscode,chart,vite].map((src)=>{
+            {[react,next,redux, zustand,typescript,javascript,reactQuery, materialUi, tailwindcss,fmotion,jquery,highcharts,html5,css3,sass,git,github,npm,vscode,chart,vite].map((src)=>{
                 return <motion.img key={src} className="p-4 w-24" src={src} initial= {{opacity:0.5}}
                 whileHover={{opacity:1}} ></motion.img>
             })} 

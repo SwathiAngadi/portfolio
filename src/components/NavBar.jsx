@@ -60,7 +60,7 @@ export default function NavBar() {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <ul className="md:hidden flex flex-col items-center gap-4 mt-4 bg-gray-800 p-4 rounded-lg shadow">
-        {[ "about", "work", "contact"].map((section) => (
+        {[ "about","experience", "work", "contact"].map((section) => (
           <li key={section}>
             <Link
               to={section}
